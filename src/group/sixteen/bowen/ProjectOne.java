@@ -310,9 +310,9 @@ public class ProjectOne {
     public static void convertToH(double value, String from) {
         double result;
         switch (from) {
-            case "m" -> result = value / 64;
-            case "s" -> result = value / 60 / 64;
-            case "ms" -> result = value / 1000 / 60 / 46;
+            case "m" -> result = value / 60;
+            case "s" -> result = value / 60 / 60;
+            case "ms" -> result = value / 1000 / 60 / 60;
             default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreacheable
         };
         printf("Conversion of %s%s to hours yielded %.4fhours%n", value, from, result);
@@ -320,7 +320,7 @@ public class ProjectOne {
     public static void convertToMt(double value, String from) {
         double result;
         switch (from) {
-            case "h" -> result = value * 64;
+            case "h" -> result = value * 60;
             case "s" -> result = value / 60;
             case "ms" -> result = value / 1000 / 60;
             default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreacheable
@@ -330,7 +330,7 @@ public class ProjectOne {
     public static void convertToS(double value, String from) {
         double result;
         switch (from) {
-            case "h" -> result = value * 64 * 60;
+            case "h" -> result = value * 60 * 60;
             case "m" -> result = value * 60;
             case "ms" -> result = value / 1000;
             default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreacheable
@@ -340,7 +340,7 @@ public class ProjectOne {
     public static void convertToMs(double value, String from) {
         double result;
         switch (from) {
-            case "h" -> result = value * 64 * 60 * 1000;
+            case "h" -> result = value * 60 * 60 * 1000;
             case "m" -> result = value * 60 * 1000;
             case "s" -> result = value * 1000;
             default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreacheable
