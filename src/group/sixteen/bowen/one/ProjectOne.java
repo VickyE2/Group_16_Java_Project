@@ -1,4 +1,4 @@
-package group.sixteen.bowen;
+package group.sixteen.bowen.one;
 
 import java.util.List;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ public class ProjectOne {
     static boolean running = true;
     static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String... args) {
+    static void main(String... args) {
         print("=============================================");
         print("     This is Group 16's Java Project One     ");
         print("               Unit Converter                ");
