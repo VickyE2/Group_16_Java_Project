@@ -1,6 +1,5 @@
 package group.sixteen.bowen.two;
 
-import group.sixteen.bowen.two.screens.HomeScreen;
 import group.sixteen.bowen.two.screens.LoginScreen;
 import javafx.application.Application;
 import javafx.stage.Stage;

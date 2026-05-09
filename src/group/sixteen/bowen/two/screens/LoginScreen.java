@@ -127,4 +127,3 @@ public class LoginScreen implements Screen {
         return email != null && email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
     }
 }
-// hico nrwx wtxm pblv

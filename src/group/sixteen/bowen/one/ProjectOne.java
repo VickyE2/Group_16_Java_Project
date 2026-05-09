@@ -1,5 +1,6 @@
 package group.sixteen.bowen.one;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -233,7 +234,7 @@ public class ProjectOne {
         switch (from) {
             case "g" -> result = value / 1000;
             case "ib" -> result = value / 2.20462;
-            case "oz" -> result = (value / 2.20462) / 16;
+            case "oz" -> result = value / 35.274;
             default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreacheable
         };
         printf("Conversion of %s%s to kilogrammes yielded %.4fKg%n", value, from, result);
@@ -244,7 +245,7 @@ public class ProjectOne {
             case "kg" -> result = value * 1000;
             case "ib" -> result = value * 1000 * 2.20462;
             case "oz" -> result = value * 1000 * 2.20462 * 16;
-            default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreacheable
+            default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreachable
         };
         printf("Conversion of %s%s to grammes yielded %.4fg%n", value, from, result);
     }
@@ -261,10 +262,10 @@ public class ProjectOne {
     public static void convertToOz(double value, String from) {
         double result;
         switch (from) {
-            case "kg" -> result = value / 16 / 2.20462;
+            case "kg" -> result = value * 35.274;
             case "g" -> result = value / 16 / 2.20462 * 1000;
             case "ib" -> result = value / 16;
-            default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreacheable
+            default -> throw new IllegalArgumentException("Unknown convert type: " + from); // Should be unreachable
         };
         printf("Conversion of %s%s to ounces yielded %.4foz%n", value, from, result);
     }
@@ -423,7 +424,7 @@ public class ProjectOne {
         System.out.printf(message, args);
     }
     public static String input(String message) {
-        System.out.println(message);
+        print(message);
         return scanner.nextLine();
     }
 }
